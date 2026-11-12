@@ -13,7 +13,9 @@ export default function Home() {
     <>
       <Progress />
       <header className="top">
-        <a href="#top" className="logo">SMTN</a>
+        <a href="#top" className="logo" aria-label="Syed Mohsin Taseer Naqvi home">
+          <Image src="/logo.png" alt="" width={48} height={48} priority />
+        </a>
         <nav aria-label="Sections">
           <a href="#projects">Projects</a><a href="#convocation">Convocation</a><a href="#experience">Experience</a>
           <a href="#skills">Skills</a><a href="#contact">Contact</a>
@@ -39,6 +41,13 @@ export default function Home() {
             <div className="cta">
               <a className="btn" href="#projects">See my work</a>
               <a className="btn ghost" href="#contact">Get in touch</a>
+              <a
+                className="btn ghost download"
+                href="/mohsin-taseer-naqvi-cv.pdf"
+                download="Mohsin-Taseer-Naqvi-CV.pdf"
+              >
+                Download CV <span className="download-icon" aria-hidden="true">↓</span>
+              </a>
             </div>
           </div>
           <div className="portrait">
