@@ -8,7 +8,7 @@ import { profile, experience, education, skills, projects, events } from "@/lib/
 const allSkills = skills.flatMap((s) => s.items);
 
 export default function Home() {
-  const first = profile.displayName.split(" ");
+  const first = profile.name.split(" ");
   return (
     <>
       <Progress />
@@ -27,7 +27,7 @@ export default function Home() {
         <div className="hero-in">
           <div className="copy">
             <p className="hi">Hi, I’m</p>
-            <h1 aria-label={profile.displayName}>
+            <h1 aria-label={profile.name}>
               {first.map((w, wi) => (
                 <span className="word" key={wi} aria-hidden="true">
                   {w.split("").map((ch, ci) => (
