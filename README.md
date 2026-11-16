@@ -135,6 +135,16 @@ You can also replace the profile image in `public/profile.jpg` and adjust visual
    - `CONTACT_TO`
 5. Deploy the project.
 
+## Google Search
+
+The site publishes a sitemap at `/sitemap.xml`, allows search engines to crawl public pages through `/robots.txt`, and includes metadata describing the portfolio owner. To request Google indexing:
+
+1. Add `https://mohsin-portfolio-theta.vercel.app/` as a URL-prefix property in [Google Search Console](https://search.google.com/search-console/), then complete its ownership verification.
+2. In Search Console, submit `https://mohsin-portfolio-theta.vercel.app/sitemap.xml`.
+3. Use URL Inspection to request indexing of the homepage.
+
+Indexing and search ranking can take time and are controlled by Google.
+
 ## Contact form setup
 
 The contact form submits to `/api/contact` and sends mail using Nodemailer. It includes:
