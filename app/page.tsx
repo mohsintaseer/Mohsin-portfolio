@@ -8,12 +8,12 @@ import { profile, experience, education, skills, projects, events } from "@/lib/
 const allSkills = skills.flatMap((s) => s.items);
 
 export default function Home() {
-  const first = profile.name.split(" ");
+  const first = profile.displayName.split(" ");
   return (
     <>
       <Progress />
       <header className="top">
-        <a href="#top" className="logo" aria-label="Syed Mohsin Taseer Naqvi home">
+        <a href="#top" className="logo" aria-label={`${profile.name} home`}>
           <Image src="/logo.png" alt="" width={48} height={48} priority />
         </a>
         <nav aria-label="Sections">
@@ -27,7 +27,7 @@ export default function Home() {
         <div className="hero-in">
           <div className="copy">
             <p className="hi">Hi, I’m</p>
-            <h1 aria-label={profile.name}>
+            <h1 aria-label={profile.displayName}>
               {first.map((w, wi) => (
                 <span className="word" key={wi} aria-hidden="true">
                   {w.split("").map((ch, ci) => (
@@ -52,7 +52,7 @@ export default function Home() {
           </div>
           <div className="portrait">
             <span className="ring" aria-hidden="true" />
-            <div className="photo"><Image src="/profile.jpg" alt="Syed Mohsin Taseer Naqvi in graduation gown" width={450} height={600} priority /></div>
+            <div className="photo"><Image src="/profile.jpg" alt={`${profile.name} in graduation gown`} width={450} height={600} priority /></div>
             <span className="badge">{education.degree} · {education.school}<br />Class of 2026</span>
           </div>
         </div>

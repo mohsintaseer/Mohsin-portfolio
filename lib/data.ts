@@ -1,5 +1,6 @@
 export const profile = {
   name: "Syed Mohsin Taseer Naqvi",
+  displayName: "Mohsin Taseer",
   role: "Computer Science graduate & software developer",
   intro:
     "I build web apps with Next.js and Node.js and work on agentic AI and retrieval-augmented generation (RAG) systems. I also taught programming labs at the University of Gujrat.",
